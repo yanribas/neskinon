@@ -228,18 +228,12 @@ i {
   max-width: 45px;
 }
 
-#top-info .icons span[data-etoggle="1"],
-.turn-arrows[data-etoggle="1"] {
+#top-info img[data-etoggle="1"] {
   opacity: 1 !important;
 }
 
-#top-info .icons span img {
-  width: auto;
-  height: 35px;
-  max-width: 38px;
-  line-height: 40px;
-  display: inline-block;
-  align-self: center;
+#top-info img {
+  opacity: 0.1;
 }
 
 #top-info .icons .icons-divider {
