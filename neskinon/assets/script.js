@@ -95,3 +95,4 @@ const callback = () => {
 };
 
 window.onload = () => callback()
+openConnection(() => bindRealtimeData());

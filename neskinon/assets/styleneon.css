@@ -98,6 +98,33 @@ body {
     box-shadow: 0 0 15px #9ecaed;
 }
 
+.anim-in-mostradores {
+    animation: load 3s ease-in;
+}
+
+
+.anim-in-valores {
+    animation: load 3s ease-in;
+}
+
+.anim-in-pc {
+    animation: load 6s ease-in;
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .velocidade {
     font-size: 80px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -189,7 +216,7 @@ body {
 }
 
 .arrefecimento-nivel {
-    animation: arref 4s ease-in-out;
+    animation: arref 8s ease-in-out;
     fill: red;
 }
 
@@ -216,7 +243,7 @@ body {
 }
 
 .tanque-nivel {
-    animation: tanque 4s ease-in-out;
+    animation: tanque 8s ease-in-out;
     fill: white;
 }
 
@@ -367,4 +394,3 @@ body {
     font-size: 9.12px;
     font-family: 'Arial Black'
 }
-
