@@ -6,26 +6,24 @@ const callback = () => {
     'fogLights', 'auxLights', 'openDoor', 'fan', 'oilSwitch', 'ECUErr'
   ];
   const elems = [
-    ...signals, 'container', 'speedo', 'rpm', 'kmTrip', 'kmTotal', 'fuelLevel',
+    ...signals, 'container', 'speedo', 'sRpm', 'kmTrip', 'kmTotal', 'fuelLevel',
     'battLevel', 'fuelPressure', 'lambda', 'oilPressure', 'boost', 'cltNow', 'tps'
   ].reduce((acc, id) => ({ ...acc, [id]: document.getElementById(id) }), {});
   const {
-    container, speedo, rpm, kmTrip, kmTotal, battLevel, tps,
+    container, speedo, sRpm, kmTrip, kmTotal, battLevel, tps,
     fuelPressure, lambda, oilPressure, boost, fuelLevel, cltNow
   } = elems;
-  const rpmGauge = document.getElementById(`rpm${rpmM}`)
   const maxRpm = rpmM * 1000
   const circularGaugeDashOffset = 11270;
   let [useCAN, useCANForRPM, useCANForVSS, useCANForCLT] = [false, false, false, false]
 
-  rpmGauge.style.display = 'block';
   setRootCSS('--main-color', cMain);
   setRootCSS('--second-color', cBg);
   setRootCSS('--rpm-color', cBg);
   loadOdo(kmTotal, kmTrip, 0)
 
   const updateRPM = (val) => {
-    setText(rpm, zeroFixed(((val || 0) / 50)) * 50)
+    setText(sRpm, zeroFixed(((val || 0) / 50)) * 50)
     setRootCSS('--rpm-deg', `${(9 + (((val || 0) / maxRpm) * 253))}deg`)
     setRootCSS('--rpm-color', (+val < redline ? cBg : cRed));
   }
@@ -95,4 +93,3 @@ const callback = () => {
 };
 
 window.onload = () => callback()
-openConnection(() => bindRealtimeData());
