@@ -11,8 +11,11 @@
 </head>
 
 <body>
+    <div class="logo">
+        <img src="./assets/logo.png" alt="" class="img-logo">
+    </div>
     <div class="main" id="container">
-        <div class="container" id="top-icons">
+        <div class="container anim-in-icones" id="top-icons">
             <div class="row justify-content-center" id="top-info">
                 <div class="col-1 text-center">
                     <img src="./assets/icons/turn-left.svg" id="turnLeft" alt="">
@@ -94,20 +97,20 @@
                     </div>
                     <div class="my-2">
                         <div class="row justify-content-between">
-                            <div class="col-2 pc-bordo" id="toil">
-                                0.0ºc
+                            <div class="col-2 pc-bordo text-center">
+                                <span id="cltNow">0.0</span>ºc
                             </div>
-                            <div class="col-2 pc-bordo" id="boost">
-                                -0.70
+                            <div class="col-2 pc-bordo text-center" id="boost">
+                                -0.00
                             </div>
-                            <div class="col-2 pc-bordo" id="tps">
-                                0%
+                            <div class="col-2 pc-bordo text-center">
+                                <span id="tps"></span>%
                             </div>
-                            <div class="col-2 pc-bordo" id="lambda">
+                            <div class="col-2 pc-bordo text-center" id="lambda">
                                 0.0
                             </div>
-                            <div class="col-2 pc-bordo" id="battLevel">
-                                12.7v
+                            <div class="col-2 pc-bordo text-center">
+                                <span id="battLevel">00.0</span>v
                             </div>
                         </div>
                     </div>
@@ -164,6 +167,9 @@
 		c0,2.835,0.005,4.401-0.249,5.592c-0.435,2.048-1.843,3.226-3.862,3.226C71.8,34.631,66.441,34.769,66.435,34.769z" />
                                 </g>
                         </div>
+                        <div class="comb-porcentagem">
+                            <span id="fuelLevel">0</span>%
+                        </div>
                         <div class="col-6">
                             <div class="row">
                                 <span class="marcha-num" id="gear">
@@ -172,8 +178,10 @@
                                 <small style="margin-top: -30px;">Marcha</small>
                             </div>
                             <div class="row justify-content-between">
-                                <div class="col-6 text-center"><small>Km Total</small><br>198.293</div>
-                                <div class="col-6 text-center"><small>Km Parcial</small><br>298.9</div>
+                                <div class="col-6 text-center"><small>Km Total</small><br><span id="kmTotal"></span>
+                                </div>
+                                <div class="col-6 text-center"><small>Km Parcial</small><br><span id="kmTrip"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="col-3">
@@ -225,8 +233,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 anim-in-mostradores" id="mostrador-direto
-                ">
+                <div class="col-4 anim-in-mostradores" id="mostrador-direto">
                     <div class="cluster-rg text-center glow">
                         <div class="rpm anim-in-valores" id="sRpm">- - -</div>
                         <p class="rpm-title"><small>RPM</small></p>
