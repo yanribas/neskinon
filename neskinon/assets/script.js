@@ -87,7 +87,7 @@ const callback = () => {
     }
   })()
 
-  setTimeout(() => openConnection(updateData), 6500)
+  setTimeout(() => openConnection(updateData), 7500)
 
   container.classList.add('anim-in')
 };

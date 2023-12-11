@@ -98,6 +98,10 @@ body {
     box-shadow: 0 0 15px #9ecaed;
 }
 
+.anim-in-icones {
+    animation: load 5s ease-in;
+}
+
 .anim-in-mostradores {
     animation: load 3s ease-in;
 }
@@ -115,6 +119,7 @@ body {
     0% {
         opacity: 0;
     }
+
     50% {
         opacity: 0;
     }
@@ -124,6 +129,30 @@ body {
     }
 }
 
+
+
+.img-logo {
+    top: 60px;
+    left: 385px;
+    position: fixed;
+    width: auto;
+    animation: loadImg 2s;
+    opacity: 0;
+}
+
+@keyframes loadImg {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 .velocidade {
     font-size: 80px;
@@ -279,6 +308,12 @@ body {
         clip-path: inset(0% 0 0 0);
         fill: rgb(255, 255, 255);
     }
+}
+
+.comb-porcentagem {
+    position: fixed;
+    top: 403px;
+    right: 120px;
 }
 
 /* SVGs */
