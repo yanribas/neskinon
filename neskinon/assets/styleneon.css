@@ -245,69 +245,26 @@ body {
 }
 
 .arrefecimento-nivel {
-    animation: arref 8s ease-in-out;
-    fill: red;
+    fill: rgba(26, 26, 26, 0.897);
+
 }
+.arrefecimento-nivel-fundo {
+    right: 375px;
+    top: 50px;
+    position: absolute;
+    fill: white;
 
-@keyframes arref {
-    0% {
-        clip-path: inset(100% 0 0 0);
-        fill: white;
-    }
-
-    50% {
-        clip-path: inset(50% 0 0 0);
-        fill: rgb(171, 255, 97);
-    }
-
-    75% {
-        clip-path: inset(25% 0 0 0);
-        fill: rgb(241, 225, 5);
-    }
-
-    100% {
-        clip-path: inset(0% 0 0 0);
-        fill: red;
-    }
 }
 
 .tanque-nivel {
-    animation: tanque 8s ease-in-out;
-    fill: white;
+    fill: rgba(26, 26, 26, 0.897);
 }
 
-
-
-@keyframes tanque {
-    0% {
-        clip-path: inset(100% 0 0 0);
-        fill: red;
-    }
-
-    20% {
-        clip-path: inset(80% 0 0 0);
-        fill: red;
-    }
-
-    40% {
-        clip-path: inset(60% 0 0 0);
-        fill: rgb(255, 200, 200);
-    }
-
-    60% {
-        clip-path: inset(40% 0 0 0);
-        fill: rgb(255, 255, 255);
-    }
-
-    80% {
-        clip-path: inset(20% 0 0 0);
-        fill: rgb(255, 255, 255);
-    }
-
-    100% {
-        clip-path: inset(0% 0 0 0);
-        fill: rgb(255, 255, 255);
-    }
+.tanque-nivel-fundo {
+    right: 780px;
+    top: 50px;
+    position: absolute;
+    fill: white;
 }
 
 .comb-porcentagem {

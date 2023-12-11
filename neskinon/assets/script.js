@@ -31,7 +31,7 @@ const callback = () => {
   const setKmhDeg = ([val, valf]) => {
     setText(speedo, zeroFixed(rpmM < 2 ? (valf || val) : val))
     if (checkCache('kmh-deg', val)) return
-    setRootCSS('--kmh-deg', `${(9 + (val < 80 ? ((val/80)*126.5) : (val < 240 ? 126.5 + (((val-80)/160)*126.5) : 253)))}deg`)
+    setRootCSS('--kmh-deg', `${(9 + (val < 80 ? ((val / 80) * 126.5) : (val < 240 ? 126.5 + (((val - 80) / 160) * 126.5) : 253)))}deg`)
   }
 
   const getCircularGaugeValue = (val) => (
@@ -71,11 +71,14 @@ const callback = () => {
       setText(fuelLevel, fuelLevelFormat(basicData, 'lvlFuel'))
       setFuelLevelBar(safeReturn(basicData, 'lvlFuel'))
 
-      for(let i = 0; i < signals.length; i++) {
+      for (let i = 0; i < signals.length; i++) {
         etoggle(elems[signals[i]], basicData[signals[i]])
       }
     }
-
+    const fuelBar = document.querySelector('#fuelBar');
+    const cltBar = document.querySelector('#cltBar');
+    fuelBar.style.clipPath = "inset(0% 0% " + fuelLevelFormat(basicData, 'lvlFuel') + "% 0%)"
+    cltBar.style.clipPath = "inset(0% 0% " + fuelLevelFormat(basicData, 'clt') + "% 0%)"
     requestAnimationFrame(updateData);
   }
 
@@ -86,9 +89,8 @@ const callback = () => {
       icons[i].src = icons[i].src.replace('icons', 'icons_color')
     }
   })()
-
+ console.log(basicData)
   setTimeout(() => openConnection(updateData), 7500)
-  el.style.clipPath = "inset(60px 60px 60px 60px)"
   container.classList.add('anim-in')
 };
 
