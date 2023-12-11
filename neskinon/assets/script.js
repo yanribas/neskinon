@@ -88,7 +88,7 @@ const callback = () => {
   })()
 
   setTimeout(() => openConnection(updateData), 7500)
-
+  el.style.clipPath = "inset(60px 60px 60px 60px)"
   container.classList.add('anim-in')
 };
 
