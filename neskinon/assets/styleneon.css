@@ -83,7 +83,6 @@ body {
     background: rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
     border: solid white;
-    box-shadow: 0 0 15px #9ecaed;
 }
 
 .cluster-rg {
@@ -95,7 +94,6 @@ body {
     background: rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
     border: solid white;
-    box-shadow: 0 0 15px #9ecaed;
 }
 
 .anim-in-icones {
@@ -204,7 +202,6 @@ body {
     height: 4px;
     background-color: white;
     border-radius: 80%;
-    box-shadow: 0 0 15px #9ecaed;
 }
 
 .marcha-num {
@@ -245,7 +242,7 @@ body {
 }
 
 .arrefecimento-nivel {
-    fill: rgba(26, 26, 26, 0.897);
+    fill: black
 
 }
 .arrefecimento-nivel-fundo {
@@ -257,7 +254,7 @@ body {
 }
 
 .tanque-nivel {
-    fill: rgba(26, 26, 26, 0.897);
+    fill: black;
 }
 
 .tanque-nivel-fundo {
